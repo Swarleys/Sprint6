@@ -1,32 +1,22 @@
 <script setup lang="ts">
 import { Messages } from "../Interfaces/interfaces"
-import { computed, ref } from 'vue';
-const { data, scene } = defineProps<{ data: Messages, scene: number }>();
+import { computed} from 'vue';
+const props = defineProps<{ data: Messages, scene: number }>();
 
-let changeScene = ref(scene);
-
-let src = computed(() => {
-  changeScene.value = scene;
-
-  return `${data.messages[changeScene.value].img.src}`
-});
-let alt = computed(() => {
-  changeScene.value = scene;
-
-  return `${data.messages[changeScene.value].img.alt}`
-});
+let src = computed(() => `${props.data.messages[props.scene].img.src}`);
+let alt = computed(() => `${props.data.messages[props.scene].img.alt}`);
 </script>
 
 <template>
-  <img :src="src" :alt="alt" />
-  <ul class="flex flex-col justify-center gap-6 mt-6 z-10">
+  <ul class="flex flex-col justify-center gap-6 mt-6">
     <li
       v-for="message, index in data.messages"
       :key="index"
-      class="text-center border-2 py-4 mx-8 rounded-[50px] border-black"
+      class="text-center bg-slate-50/75 border-2 py-4 mx-8 rounded-[50px] border-black z-10"
       :class="{ active: index === scene }"
     >{{ message.txt }}</li>
   </ul>
+    <img :src="src" :alt="alt" class="absolute top-0" />
 </template>
 
 <style scoped>

@@ -15,10 +15,10 @@ const decrease = () => {
 </script>
 
 <template>
-    <div class="flex gap-5 p-4 justify-around z-10">
+    <div class="flex gap-5 p-4 justify-around">
         <button
             type="button"
-            class="text-4xl bg-slate-300 w-full py-4 border-2 border-black z-10 relative"
+            class="text-4xl bg-slate-300 w-full py-4 border-2 border-black z-10"
             @click="decrease"
         >Anterior</button>
         <button
