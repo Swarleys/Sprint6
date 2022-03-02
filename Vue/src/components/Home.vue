@@ -24,10 +24,19 @@ const decrease = (): number => {
 <template>
     <div v-if="!started" class="flex flex-col justify-center items-center gap-20 mt-20">
         <h1 class="text-6xl">Sprint6 Vue</h1>
-        <p class="max-w-6xl text-center text-3xl">Aquest es el primer projecte que fem amb Vue al Sprint 6, es una historia interactiva que funciona fent click en un parell de butons que serveixen per avançar o retrocedir l'historia. Fes click en el següent boto quant estiguis preparat</p>
-        <button type="button" @click="() => started = true" class="text-3xl p-4 bg-slate-300 rounded-lg border-2 border-slate-700">Comencem!</button>
+        <p
+            class="max-w-6xl text-center text-3xl"
+        >Aquest es el primer projecte que fem amb Vue al Sprint 6, es una historia interactiva que funciona fent click en un parell de butons que serveixen per avançar o retrocedir l'historia. Fes click en el següent boto quant estiguis preparat</p>
+        <button
+            type="button"
+            @click="() => started = true"
+            class="text-3xl p-4 bg-slate-300 rounded-lg border-2 border-slate-700"
+        >Comencem!</button>
     </div>
-    <div v-if="started">
+    <div
+        v-if="started"
+        class="max-w-[960px] m-auto"
+    >
         <Botons @nextScene="increase()" @prevScene="decrease()" />
         <Scene :data="messages" :scene="currentSentence" />
     </div>

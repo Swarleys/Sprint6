@@ -1,3 +1,9 @@
 export interface Messages {
-    "messages": string[];
+    "messages": {
+        txt: string;
+        img: {
+            src: string;
+            alt: string;
+        }
+    }[];
 };
