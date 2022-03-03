@@ -1,0 +1,32 @@
+{
+	"messages": [
+		{
+			"txt": "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
+			"img": {
+				"src": "../src/assets/img/0.jpg",
+				"alt": "Primera imatge de l'historia."
+			}
+		},
+		{
+			"txt": "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
+			"img": {
+				"src": "../src/assets/img/1.jpg",
+				"alt": "Segona imatge de l'historia."
+			}
+		},
+		{
+			"txt": "L'heroi va decidir travessar la porta que el portava a casa",
+			"img": {
+				"src": "../src/assets/img/2.jpg",
+				"alt": "Tercera imatge de l'historia."
+			}
+		},
+		{
+			"txt": "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ...",
+			"img": {
+				"src": "../src/assets/img/3.jpg",
+				"alt": "Quarta imatge de l'historia."
+			}
+		}
+	]
+}
